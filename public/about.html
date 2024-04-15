@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="styles.css">
+
+<style>
+         .about-section {
+             margin-top: 50px;
+             text-align: center;
+             background-color: #fff; /* Set background color to white */
+             padding: 20px;
+             border-radius: 10px;
+             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        
+            }   
+        
+        #chatbot-container {
+        
+            margin: 0 auto;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+        }
+        
+        
+        #user-input {
+            width: calc(100% - 70px);
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        
+        button {
+            padding: 8px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+
+</style>
+
+</head>
+<body>
+    <header>
+        <div class="top-banner">
+            <div class="logo">
+                <img src="images/Iwemba Lions Logo.jpg" >
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><img src="images/download.jpg" alt=""></a></li>
+                    <li><a href="fixtures.html"><img src="images/th.jpg" alt=""></a></li>
+                    <li><a href="gallery.html"><img src="images/download (1).jpg" alt=""></a></li>
+                    <li><a href="about.html"><img src="images/OIP.jpg" alt=""></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="content">
+        <!-- Introduction Section -->
+        <section class="about-section">
+            <h1><b>What is Iwemba Lions?</b></h1>
+            <p>- Iwemba Lions is a soccer team founded by <span style="color:red;">Nixon Waudo</span></p>
+            <p>- His ambition is to ensure that there is advancement in football in his original town Iwemba found in Bugiri</p>
+            
+        </section>
+
+        <!-- This is my moto section            -->
+        <section class="about-section">
+            <h1><b>MOTTO</b></h1>
+            <p>- All boys and girls should play</p>
+
+        </section>
+
+        <!-- Chatbot Section -->
+        <section class="about-section">
+            <h1><b>Ask us anything!</b></h2>
+            <div id="chatbot-container">
+                <div id="chatlog"></div>
+                <input type="text" id="user-input" placeholder="Type your question here...">
+                <button onclick="askQuestion()">Send</button>
+            </div>
+        </section>
+
+        <!-- Details Section -->
+        <section class="about-section">
+            <h1><b>Where are we found?</b></h1>
+            <div class="map-container">
+                <!-- Paste the embedded map code here -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.4340254663547!2d-33.97160528528956!3d0.5652459148589211!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1770f2c078d00cd7%3A0x91430d90d5bb6b6c!2sIwemba%2C%20Bugiri!5e0!3m2!1sen!2sug!4v1648029984501!5m2!1sen!2sug" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+        <!-- More sections if needed -->
+
+    </div>
+
+    <footer>
+        <div class="bottom-banner">
+            <p>&copy; 2024 Iwemba Lions FC. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="js/about.js">
+
+    </script>
+</body>
+</html>

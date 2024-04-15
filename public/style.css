@@ -1,0 +1,414 @@
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: rgb(241, 241, 241);
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+}
+
+.top-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li img {
+    width: 20px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+border-radius: 50%;
+
+}
+
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #999; /* Adjust hover color as needed */
+}
+
+/* Blue underline hover effect for navigation links */
+nav ul li a {
+    position: relative;
+    color: #000; /* Default text color */
+    text-decoration: none;
+    transition: color 3s ease; /* Add transition effect for text color */
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    color: red; /* Change text color on hover and for active page */
+    
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #007bff; /* Blue underline color */
+    transition: width 0.6s ease-out; /* Add transition effect for underline width */
+}
+
+nav ul li a.active::after,
+nav ul li a:hover::after {
+    width: 100%; /* Expand underline on hover and for active page */
+}
+
+
+.content {
+    padding: 20px;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.bottom-banner p {
+    margin: 0;
+}
+
+/* Existing styles */
+
+.content {
+    padding: 20px;
+    
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.image:hover img {
+    transform: scale(1.1);
+}
+
+.image:hover:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s ease;
+}
+
+.image:hover:after {
+    background-color: rgba(0, 0, 0, 0);
+    text-underline-position: below;
+
+}
+
+.image a {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+}
+     
+
+
+.logo img {
+    width: 70px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Apply border radius for a circular shape */
+    border: 3px solid #333; /* Add a border */
+    padding: 5px; /* Add some padding to the border */
+    font-size: 16px; /* Default font size */
+    text-decoration: none; /* Default text decoration */
+
+}
+
+/* Optional: Add hover effect */
+.logo img:hover {
+    transform: scale(1.1); /* Scale up the image on hover */
+    transition: transform 0.3s ease; /* Smooth transition */
+    text-decoration: underline; /* Underline on hover */
+    color: black; /* Black text color on hover */
+    font-size: 18px; /* Increased font size on hover */
+}
+
+/* Default font size */
+body {
+    font-size: 16px;
+}
+
+
+/* Default logo size */
+.logo img {
+    width: 100px; /* Default width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+/* Media query for largerer screens */
+@media screen and (max-width: 1080px) {
+    body {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+    .logo img {
+        width: 90px; /* Adjust width for smaller screens */
+    }
+
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 15px; /* Adjust font size for smaller screens */
+    }
+    .logo img {
+        width: 80px; /* Adjust width for smaller screens */
+    }
+    .logo {
+        display: none;
+    }
+   .top-banner, nav ul {
+        display: flex;
+        justify-content: center;
+        margin: 0; /* Remove default margin */
+        padding: 15px; /* Remove default padding */
+    }
+}
+
+/* Media query for even smaller screens */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px; /* Further adjust font size for even smaller screens */
+    }
+    .logo img {
+        width: 60px; /* Further adjust width for even smaller screens */
+    }
+    .logo {
+        display: none;
+    }
+    .top-banner, nav ul {
+        display: flex;
+        justify-content: center;
+        margin: 0; /* Remove default margin */
+        padding: 15px; /* Remove default padding */
+    }
+}
+
+
+/* Media query for even smallest screens */
+@media screen and (max-width: 330px) {
+    body {
+        font-size: 12px; /* Further adjust font size for even smaller screens */
+    }
+    .logo img {
+        width: 40px; /* Further adjust width for even smaller screens */
+    }
+    .logo {
+        display: none;
+    }
+    .top-banner, nav ul {
+        display: flex;
+        justify-content: center;
+        margin: 0; /* Remove default margin */
+        padding: 15px; /* Remove default padding */
+    }
+}
+
+/* Media query for even smallest of all screens */
+@media screen and (max-width: 290px) {
+    body {
+        font-size: 10px; /* Further adjust font size for even smaller screens */
+    }
+    .logo img {
+        width: 20px; /* Further adjust width for even smaller screens */
+    }
+    .logo {
+        display: none;
+    }
+    .top-banner, nav ul {
+        display: flex;
+        justify-content: center;
+        margin: 0; /* Remove default margin */
+        padding: 15px; /* Remove default padding */
+    }
+}
+
+
+
+
+.map-container {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 56.25%; /* Aspect ratio (height:width) of 16:9 */
+    height: 0;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+} 
+
+b, h1 {
+background: #000;
+color: #fff;
+}
+
+/* Styles for fixtures */
+.fixture {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.fixture h2 {
+    margin-top: 0;
+}
+
+.fixture p {
+    margin: 5px 0;
+}
+
+/* Styles for the banner image */
+.banner {
+    position: relative;
+    overflow: hidden;
+    height: 200px; /* Adjust banner height as needed */
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.overlay h1 {
+    font-size: 24px; /* Adjust font size as needed */
+    text-align: center;
+}
+
+/* CSS for the grid container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust as needed */
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+/* CSS for the grid items */
+.grid-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.chat-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px;
+    max-width: 90%;
+}
+
+.user-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.user-list li {
+    margin-bottom: 5px;
+}
+
+#usernameInput {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#usernameInput:focus {
+    outline: none;
+    border-color: #66afe9;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+input[type="text"]::placeholder {
+    color: #aaa;
+}
+
+#totalUsers {
+    font-weight: bold;
+    font-size: 18px;
+    color: #888;
+}
